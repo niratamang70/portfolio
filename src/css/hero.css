@@ -1,0 +1,29 @@
+.main {
+  align-items: center;
+  min-height: auto;
+}
+
+.introduction {
+  margin-top: 25px;
+}
+
+.introduction h4 {
+  font-size: 24px;
+  line-height: 34px;
+  font-weight: 400;
+}
+
+.introduction p {
+  font-size: 17px;
+}
+
+.introduction h1 {
+  font-size: 45px;
+  line-height: 80px;
+  font-weight: 700;
+}
+
+.cursor {
+  color: dodgerblue;
+  font-weight: 100;
+}

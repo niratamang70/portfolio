@@ -1,0 +1,47 @@
+.nav-bar {
+  min-height: 80px;
+}
+
+.navbar-header {
+  -webkit-box-shadow: 0 3px 5px rgba(57, 63, 72, 0.3);
+  -moz-box-shadow: 0 3px 5px rgba(57, 63, 72, 0.3);
+  box-shadow: 0 3px 5px rgba(95, 97, 100, 0.3);
+  background-color: white;
+  transition: 0.9s ease-in-out;
+  z-index: 99;
+}
+
+.no-vavbar-header {
+  opacity: 0;
+  transition: 3s ease-in-out;
+}
+
+.toggle-btn {
+  text-decoration: none;
+  border: none;
+}
+
+.logo {
+  font-size: 34px;
+  font-weight: 700;
+  border: 2px solid dodgerblue;
+  color: dodgerblue;
+  padding: 0px 10px;
+  text-decoration: none;
+}
+.logo:hover {
+  background-color: dodgerblue;
+  color: white;
+}
+.toggle-icon {
+  border: none;
+  font-size: 25px;
+}
+
+.nav-iems {
+  color: black;
+}
+
+.nav-iems:hover {
+  color: dodgerblue;
+}

@@ -1,0 +1,102 @@
+.contact-container {
+  margin-top: 80px;
+}
+
+.contact-header h5 {
+  font-size: 15px;
+}
+
+.contact-header h3 {
+  font-size: 34px;
+  line-height: 44px;
+}
+
+.contact-left h3 {
+  font-size: 28px;
+  font-weight: bold;
+  line-height: 38px;
+}
+
+.contact-details p {
+  font-size: 17px;
+  display: flex;
+  margin-bottom: 14px;
+  justify-content: flex-start;
+  align-items: center;
+}
+.details {
+  margin-left: 10px;
+  transition-property: all;
+  transition-duration: 0.5s;
+  transition-timing-function: ease;
+  transition-delay: 0s;
+}
+
+.hover-effect:hover {
+  color: dodgerblue;
+  cursor: pointer;
+}
+
+.contact-left h4 {
+  font-size: 21px;
+  font-weight: 600;
+  line-height: 31px;
+}
+
+.social-media-icon {
+  padding-left: 0;
+  margin-left: 0;
+}
+
+.social-media-icon li {
+  font-size: 30px;
+  display: inline-block;
+  list-style-type: none;
+  height: 40px;
+  width: 40px;
+  line-height: 40px;
+  color: black;
+  text-align: center;
+  transition-property: all;
+  transition-duration: 0.5s;
+  transition-timing-function: ease;
+  transition-delay: 0s;
+  margin-right: 4px;
+}
+
+.social-media-icon li:hover {
+  cursor: pointer;
+  color: dodgerblue;
+}
+
+.inputs input {
+  width: 100%;
+  color: black;
+  background: aliceblue;
+  font-size: 16px;
+  padding: 14px;
+  outline: none;
+  margin-bottom: 16px;
+  border-radius: 10px;
+  resize: none;
+  border: none;
+}
+
+.inputs textarea {
+  width: 100%;
+  color: black;
+  background: aliceblue;
+  font-size: 16px;
+  padding: 14px;
+  outline: none;
+  margin-bottom: 16px;
+  border-radius: 10px;
+  resize: none;
+  height: 120px;
+  margin: 0 0 20px 0;
+  border: none;
+}
+
+.contact-icon {
+  color: dodgerblue;
+}

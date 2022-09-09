@@ -1,0 +1,46 @@
+.contactbar-container {
+  background-color: dodgerblue;
+  color: white;
+  width: 100%;
+  position: relative;
+}
+
+.footer-logo {
+  font-size: 34px;
+  font-weight: 700;
+  border: 1px solid white;
+  color: white;
+  padding: 0px 10px;
+  text-decoration: none;
+}
+.footer-logo:hover {
+  background-color: #fff;
+  color: dodgerblue;
+}
+
+.socail-media-icon li {
+  margin: 0px 3px;
+  display: inline-block;
+  list-style-type: none;
+  height: 40px;
+  width: 40px;
+  line-height: 40px;
+  border-radius: 50%;
+  background: rgb(255 255 255 / 30%);
+  color: black;
+  text-align: center;
+  transition-property: all;
+  transition-duration: 0.5s;
+  transition-timing-function: ease;
+  transition-delay: 0s;
+}
+
+.socail-media-icon li:hover {
+  cursor: pointer;
+  background-color: white;
+  border-radius: 50%;
+}
+
+.copy-right {
+  border-top: 1px solid #fff3;
+}
