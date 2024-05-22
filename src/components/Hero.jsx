@@ -106,7 +106,7 @@ const Hero = () => {
                 >
                   <FontAwesomeIcon icon={faSquare} style={{ color: 'dodgerblue' }} />
                 </motion.div>
-                <Image src={nira} fluid style={{ width: '100%', height: 'auto' }} />
+                {/* <Image src={nira} fluid style={{ width: '100%', height: 'auto' }} /> */}
               </div>
             </Col>
           </Row>
