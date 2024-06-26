@@ -11,9 +11,9 @@ const Home = () => {
   return (
     <div className="mt-lg-0 mt-5">
       <Hero />
-      <Qualifications />
+      {/* <Qualifications /> */}
       <AboutMe />
-      <Project />
+      {/* <Project /> */}
     </div>
   );
 };

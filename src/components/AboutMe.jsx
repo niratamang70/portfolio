@@ -4,6 +4,15 @@ import Image from 'react-bootstrap/Image';
 import nira2 from '../images/nira2.jpg';
 
 const AboutMe = () => {
+  const handleCVDownload = () => {
+    const fileUrl = `${process.env.PUBLIC_URL}/niraTamangCvUpdated.pdf`;
+    const link = document.createElement('a');
+    link.href = fileUrl;
+    link.download = 'niraTamangCv.pdf';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
   return (
     <div className="about-me-container">
       <Container>
@@ -52,7 +61,9 @@ const AboutMe = () => {
                   </li>
                 </ul>
               </div>
-              <Button className="mt-5">Download CV</Button>
+              <Button className="mt-5" onClick={handleCVDownload}>
+                Download CV
+              </Button>
             </div>
           </Col>
         </Row>
