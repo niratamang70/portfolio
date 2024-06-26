@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button, Col, Container, Image, Row } from 'react-bootstrap';
+import { Button, Col, Container, Row } from 'react-bootstrap';
 import nira from '../images/nira.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faStar, faCircle, faSquare, faHeart } from '@fortawesome/free-regular-svg-icons';
@@ -12,7 +12,7 @@ const Hero = () => {
   const [isActive, setIsActive] = useState(true);
   let navigate = useNavigate();
   const discoverMeHandler = () => {
-    navigate('./success', { replace: true });
+    window.open('https://www.linkedin.com/in/nira-tamang-063a1a200/', '_blank', 'noopener,noreferrer');
   };
 
   return (
