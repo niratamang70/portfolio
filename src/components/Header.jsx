@@ -52,11 +52,6 @@ const Header = () => {
                 </Link>
               </Nav.Item>
               <Nav.Item href="#action2" className="px-4">
-                <Link to="/projects" className="text-decoration-none nav-iems">
-                  Projects
-                </Link>
-              </Nav.Item>
-              <Nav.Item href="#action2" className="px-4">
                 <Link to="/contact" className="text-decoration-none nav-iems">
                   Contact
                 </Link>
