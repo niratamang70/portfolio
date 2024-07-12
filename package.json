@@ -2,7 +2,7 @@
   "name": "nira",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://niratamang70.github.io/portfolio",
+  "homepage": "https://niratamang70.github.io",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.2.0",
     "@fortawesome/free-brands-svg-icons": "^6.2.0",
