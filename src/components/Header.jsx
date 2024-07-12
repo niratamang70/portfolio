@@ -46,16 +46,6 @@ const Header = () => {
                   Home
                 </Link>
               </Nav.Item>
-              <Nav.Item className="px-4">
-                <Link to="/about" className="text-decoration-none nav-iems">
-                  About
-                </Link>
-              </Nav.Item>
-              <Nav.Item href="#action2" className="px-4">
-                <Link to="/contact" className="text-decoration-none nav-iems">
-                  Contact
-                </Link>
-              </Nav.Item>
             </Nav>
           </Navbar.Collapse>
         </Container>
