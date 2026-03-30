@@ -1,119 +1,86 @@
-import React from 'react';
-import { Button, Col, Container, Row } from 'react-bootstrap';
-import nira from '../images/nira.png';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faStar, faCircle, faSquare, faHeart } from '@fortawesome/free-regular-svg-icons';
-import { motion } from 'framer-motion';
+import { Button, Container } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
-import { useState } from 'react';
-import Typewriter from 'typewriter-effect';
 
-const Hero = () => {
-  const [isActive, setIsActive] = useState(true);
-  let navigate = useNavigate();
-  const discoverMeHandler = () => {
-    window.open('https://www.linkedin.com/in/nira-tamang-063a1a200/', '_blank', 'noopener,noreferrer');
-  };
+const STATS = [
+  { value: '3.5+', label: 'Years experience' },
+  { value: 'React', label: 'Primary stack' },
+  { value: 'Troy', label: 'MS CS, 2026' }
+];
 
+export default function Hero() {
+  const navigate = useNavigate();
   return (
-    <div className="main ">
-      <div className="main-container">
-        <Container className="py-md-5 pt-4">
-          <Row className="d-flex justify-content-between align-items-center pt-4">
-            <Col lg={6} md={12} className="pe-xl-5 ">
-              <motion.div
-                style={{ width: '0px', height: '0px' }}
-                animate={{
-                  rotate: isActive ? 360 : 360
-                }}
-                transition={{ duration: 10, repeat: Infinity }}
-              >
-                <FontAwesomeIcon icon={faStar} style={{ color: 'dodgerblue' }} size="2x" />
-              </motion.div>
-              <div className="introduction">
-                <h4>Hi,I am Nira Tamang</h4>
-                <h1 className="mb-3 mt-1">
-                  <Typewriter
-                    options={{ loop: true, autoStart: true, cursor: '|', cursorClassName: 'cursor' }}
-                    onInit={typewriter => {
-                      typewriter
-                        .typeString('DEVELOPER')
-                        .pauseFor(1500)
-                        .deleteAll()
-                        .typeString('DEVELOPER')
-                        .deleteAll()
-                        .start();
-                    }}
-                  ></Typewriter>
-                </h1>
-                <p className="me-md-3">
-                  I love to work in UI/UX designing. I always try my best to make good UI with the best UX.
-                </p>
+    <section className="text-center" style={{ padding: '60px 5% 48px' }}>
+      <Container style={{ maxWidth: '860px' }} className="py-md-5 pt-4">
+        <div
+          className="d-inline-flex align-items-center gap-2 rounded-pill px-3 py-2 mb-4"
+          style={{ background: '#dbeafe', fontSize: 13, color: 'dodgerblue', fontWeight: 500 }}
+        >
+          <span
+            style={{ width: 7, height: 7, borderRadius: '50%', background: 'dodgerblue', display: 'inline-block' }}
+          />
+          Open to internships · Summer 2026
+        </div>
 
-                <div className="d-flex align-items-center mt-4 mt-sm-5 ">
-                  <Button
-                    variant="primary"
-                    className="btn1 me-2"
-                    size="lg"
-                    style={{ boxShadow: 'none' }}
-                    onClick={discoverMeHandler}
-                  >
-                    Discover Me
-                  </Button>
-                </div>
-                <motion.div
-                  animate={{
-                    rotate: isActive ? 360 : 360
-                  }}
-                  transition={{ duration: 40, repeat: Infinity }}
-                >
-                  <FontAwesomeIcon icon={faCircle} style={{ color: 'peachpuff' }} />
-                </motion.div>
-                <motion.div
-                  style={{ float: 'right' }}
-                  animate={{ y: [0, -290, 50, 0] }}
-                  transition={{
-                    duration: 40,
-                    delay: 0.3,
-                    ease: [0.5, 0.5, 0.5, 0.5],
-                    repeat: Infinity
-                  }}
-                >
-                  <FontAwesomeIcon icon={faCircle} style={{ color: 'orange' }} />
-                </motion.div>
-              </div>
-            </Col>
-            <Col lg={6} md={12} className="d-none d-lg-block">
-              <motion.div
-                animate={{ y: [0, 290, 50, 0] }}
-                transition={{
-                  duration: 50,
-                  delay: 0.3,
-                  ease: [0.5, 0.5, 0.5, 0.5],
-                  repeat: Infinity
-                }}
-              >
-                <FontAwesomeIcon icon={faCircle} style={{ color: 'purple' }} />
-              </motion.div>
+        <h1
+          className="mb-4"
+          style={{
+            fontFamily: "'Sora', sans-serif",
+            fontSize: '3.6rem',
+            fontWeight: 800,
+            lineHeight: 1.1,
+            color: '#1e3a5f'
+          }}
+        >
+          Frontend &amp; <span style={{ color: 'dodgerblue' }}>full stack</span>
+          <br /> engineer
+        </h1>
 
-              <div className="image">
-                <motion.div
-                  animate={{
-                    rotate: isActive ? 360 : 360,
-                    y: [30, 0, 350, 0]
-                  }}
-                  transition={{ duration: 30, repeat: Infinity }}
-                >
-                  <FontAwesomeIcon icon={faSquare} style={{ color: 'dodgerblue' }} />
-                </motion.div>
-                {/* <Image src={nira} fluid style={{ width: '100%', height: 'auto' }} /> */}
+        <p className="mx-auto mb-5 text-secondary" style={{ maxWidth: 440, lineHeight: 1.7 }}>
+          MS Computer Science student at Troy University. Building clean, fast interfaces and distributed systems from
+          Nepal to the US tech scene.
+        </p>
+
+        <div className="d-flex justify-content-center gap-3 mb-5 flex-wrap">
+          <Button variant="primary" className="rounded-3 px-4" onClick={() => navigate('/projects')}>
+            View work
+          </Button>
+          <Button
+            variant="outline-primary"
+            className="rounded-3 px-4"
+            onClick={() => window.open('https://github.com/niratamang70', '_blank')}
+          >
+            GitHub
+          </Button>
+          <Button
+            variant="outline-primary"
+            className="rounded-3 px-4"
+            onClick={() => window.open('https://www.linkedin.com/in/nira-tamang/', '_blank')}
+          >
+            LinkedIn
+          </Button>
+        </div>
+
+        <div
+          className="d-inline-flex bg-white rounded-4 px-5 py-4"
+          style={{ boxShadow: '0 2px 16px rgba(30,144,255,0.08)' }}
+        >
+          {STATS.map((s, i) => (
+            <div
+              key={s.value}
+              className="text-center px-4"
+              style={{ borderRight: i < STATS.length - 1 ? '1.5px solid #e5e7eb' : 'none' }}
+            >
+              <div style={{ fontFamily: "'Sora', sans-serif", fontSize: 22, fontWeight: 700, color: '#1e3a5f' }}>
+                {s.value}
               </div>
-            </Col>
-          </Row>
-        </Container>
-      </div>
-    </div>
+              <div className="text-secondary" style={{ fontSize: 12, marginTop: 4 }}>
+                {s.label}
+              </div>
+            </div>
+          ))}
+        </div>
+      </Container>
+    </section>
   );
-};
-
-export default Hero;
+}

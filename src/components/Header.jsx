@@ -1,6 +1,6 @@
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
 import { useState } from 'react';
-import { Container, Nav, Navbar } from 'react-bootstrap';
+import { Button, Container, Nav, Navbar } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars, faXmark } from '@fortawesome/free-solid-svg-icons';
@@ -25,28 +25,42 @@ const Header = () => {
   return (
     <>
       <Navbar expand="lg" className={`${isScroll ? 'navbar-header' : 'no-navbar-header'} nav-bar`} fixed="top">
-        <Container>
+        <Container className="d-flex align-items-center">
           <Navbar.Brand href="#" className="fw-bolder">
             <Link to="/" className="py-1 logo">
-              N
+              Nira Tamang
             </Link>
           </Navbar.Brand>
           <Navbar.Toggle
             aria-controls="navbarScroll"
             className="toggle-icon"
-            style={{ boxshadow: 'none' }}
+            style={{ boxShadow: 'none' }}
             onClick={toggleHandler}
           >
             <FontAwesomeIcon icon={toggle ? faXmark : faBars} className="toggle-btn" />
           </Navbar.Toggle>
+
           <Navbar.Collapse id="navbarScroll">
-            <Nav className="  justify-content-end flex-grow-1 pe-3 fw-bold text-center " navbarScroll>
+            <Nav className="mx-auto text-center" navbarScroll>
               <Nav.Item className="px-4">
-                <Link to="/" className="text-decoration-none nav-iems">
-                  Home
+                <Link to="/about" className="text-decoration-none nav-items">
+                  About
+                </Link>
+              </Nav.Item>
+              <Nav.Item className="px-4">
+                <Link to="/" className="text-decoration-none nav-items">
+                  Projects
+                </Link>
+              </Nav.Item>
+              <Nav.Item className="px-4">
+                <Link to="/" className="text-decoration-none nav-items">
+                  Resume
                 </Link>
               </Nav.Item>
             </Nav>
+            <Button variant="outline-primary" className="rounded-pill px-4">
+              Hire me
+            </Button>
           </Navbar.Collapse>
         </Container>
       </Navbar>

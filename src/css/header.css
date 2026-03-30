@@ -6,14 +6,9 @@
   -webkit-box-shadow: 0 3px 5px rgba(57, 63, 72, 0.3);
   -moz-box-shadow: 0 3px 5px rgba(57, 63, 72, 0.3);
   box-shadow: 0 3px 5px rgba(95, 97, 100, 0.3);
-  background-color: white;
   transition: 0.9s ease-in-out;
   z-index: 99;
-}
-
-.no-vavbar-header {
-  opacity: 0;
-  transition: 3s ease-in-out;
+  background: var(--bg);
 }
 
 .toggle-btn {
@@ -22,26 +17,45 @@
 }
 
 .logo {
-  font-size: 34px;
+  font-family: 'Sora', sans-serif;
   font-weight: 700;
-  border: 2px solid dodgerblue;
-  color: dodgerblue;
-  padding: 0px 10px;
+  font-size: 17px;
+  color: #1e1b4b;
   text-decoration: none;
 }
-.logo:hover {
-  background-color: dodgerblue;
-  color: white;
-}
+
 .toggle-icon {
   border: none;
   font-size: 25px;
 }
 
-.nav-iems {
-  color: black;
+.nav-items {
+  color: #6b7280;
+  text-decoration: none;
+  transition: color 0.2s;
+  cursor: pointer;
 }
 
-.nav-iems:hover {
+.nav-items:hover {
   color: dodgerblue;
 }
+
+.font-sora {
+  font-family: 'Sora', sans-serif;
+}
+
+/* Navbar background on scroll */
+.navbar-header {
+  background: rgba(238, 240, 251, 0.92) !important;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 1px 12px rgba(99, 102, 241, 0.08);
+  transition: all 0.3s ease;
+}
+
+.no-navbar-header {
+  background: transparent !important;
+  transition: all 0.3s ease;
+}
+
+/* Import Sora font — add to index.html or top of CSS */
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@700;800&display=swap');
