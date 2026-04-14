@@ -9,6 +9,11 @@ const STATS = [
 
 export default function Hero() {
   const navigate = useNavigate();
+
+  const handleViewWork = () => {
+    // navigate('/projects');
+    return;
+  };
   return (
     <section className="text-center" style={{ padding: '60px 5% 48px' }}>
       <Container style={{ maxWidth: '860px' }} className="py-md-5 pt-4">
@@ -42,7 +47,7 @@ export default function Hero() {
         </p>
 
         <div className="d-flex justify-content-center gap-3 mb-5 flex-wrap">
-          <Button variant="primary" className="rounded-3 px-4" onClick={() => navigate('/projects')}>
+          <Button variant="primary" className="rounded-3 px-4" onClick={handleViewWork}>
             View work
           </Button>
           <Button

@@ -4,6 +4,7 @@ import { Button, Container, Nav, Navbar } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars, faXmark } from '@fortawesome/free-solid-svg-icons';
+import resume from '../assets/resume.pdf';
 
 const Header = () => {
   const [isScroll, setIsScroll] = useState(false);
@@ -12,7 +13,13 @@ const Header = () => {
   const toggleHandler = () => {
     setToggle(!toggle);
   };
+  const handleResume = () => {
+    window.open(resume, '_blank');
+  };
 
+  const handleHireMe = () => {
+    window.open('https://www.linkedin.com/in/nira-tamang/', '_blank');
+  };
   useEffect(() => {
     window.onscroll = function () {
       if (window.scrollY > 16) {
@@ -47,18 +54,16 @@ const Header = () => {
                   About
                 </Link>
               </Nav.Item>
-              <Nav.Item className="px-4">
+              {/* <Nav.Item className="px-4">
                 <Link to="/" className="text-decoration-none nav-items">
                   Projects
                 </Link>
-              </Nav.Item>
-              <Nav.Item className="px-4">
-                <Link to="/" className="text-decoration-none nav-items">
-                  Resume
-                </Link>
+              </Nav.Item> */}
+              <Nav.Item className="px-4" onClick={handleResume}>
+                <Link className="text-decoration-none nav-items">Resume</Link>
               </Nav.Item>
             </Nav>
-            <Button variant="outline-primary" className="rounded-pill px-4">
+            <Button variant="outline-primary" className="rounded-pill px-4" onClick={handleHireMe}>
               Hire me
             </Button>
           </Navbar.Collapse>

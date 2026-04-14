@@ -48,6 +48,10 @@ const SKILLS = [
 ];
 
 const Home = () => {
+  const handleGetInTouch = () => {
+    window.open('mailto:neera678@gmail.com ', '_blank');
+  };
+
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -101,6 +105,7 @@ const Home = () => {
                 e.currentTarget.style.background = 'white';
                 e.currentTarget.style.color = 'dodgerblue';
               }}
+              onClick={handleGetInTouch}
             >
               Get in touch
             </Button>
